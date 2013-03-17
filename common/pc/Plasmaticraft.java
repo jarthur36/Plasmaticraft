@@ -33,4 +33,8 @@ public void load(FMLInitializationEvent event){ //Your main initialization metho
 
 NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
 }
+public void modLog(ModLoggingLevel level, String str) {
+  
+}
+  }
 }
