@@ -18,6 +18,7 @@ public class ItemFireballGun extends Item {
 		setIconIndex(2);
 		setCreativeTab(CommonProxy.CTAB);
 		setTextureFile(CommonProxy.ITEM);
+		setItemName("pGun");
 		// TODO Auto-generated constructor stub
 	}
 	 public void addInformation(ItemStack par1ItemStack, List par2List)
