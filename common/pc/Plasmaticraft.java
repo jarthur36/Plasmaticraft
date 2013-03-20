@@ -26,7 +26,7 @@ serverPacketHandlerSpec = @SidedPacketHandler(channels = {}, packetHandler = Ser
 public class Plasmaticraft { //The class file
 static Item pIngot = new Item(1000).setIconIndex(0).setItemName("plasmiumIngot").setCreativeTab(CommonProxy.CTAB).setTextureFile(CommonProxy.ITEM);
 static Item pShard = new Item(1001).setIconIndex(1).setItemName("plasmiumShard").setCreativeTab(CommonProxy.CTAB).setTextureFile(CommonProxy.ITEM);
-public static Item pWrench = new Item(1002).setIconIndex(2).setItemName("plasmiumWrench").setCreativeTab(CommonProxy.CTAB).setTextureFile(CommonProxy.ITEM);
+static Item pWrench = new Item(1003).setIconIndex(3).setItemName("plasmiumWrench").setCreativeTab(CommonProxy.CTAB).setTextureFile(CommonProxy.ITEM);
 static Item pGun = new ItemFireballGun();
 static Block pOre = new BlockOrePlasmatium(1000).setCreativeTab(CommonProxy.CTAB);
 static Block pEnetMan = new BlockEnetManager().setCreativeTab(CommonProxy.CTAB);
@@ -39,7 +39,7 @@ public void load(FMLInitializationEvent event) { //Your main initialization meth
 	NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
 	LanguageRegistry.addName(pIngot, "Plasmium ingot");
 	LanguageRegistry.addName(pShard, "Plasmium Shard");
-	LanguageRegistry.addName(pWrench, "Plasmium Shard");
+	LanguageRegistry.addName(getpWrench(), "Plasmium Shard");
 	LanguageRegistry.addName(pGun, "Plasmium Gun");
 	LanguageRegistry.instance().addStringLocalization("itemGroup.PlasmatiCraft Mod", "en_US", "PlasmatiCraft Mod");
 	GameRegistry.registerBlock(pOre);
@@ -65,6 +65,10 @@ default :
 	   return 0;
    }
 }
+public static Item getpWrench() {
+	return pWrench;
+}
+
 }
 
   
